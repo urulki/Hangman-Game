@@ -10,19 +10,23 @@ namespace Management
 {
     public class GameManager : MonoBehaviour
     {
-        
+        public List<LettersBoxesComponent> LettersBoxes = new List<LettersBoxesComponent>();
         public Dictionary<char,Button> Letters = new Dictionary<char, Button>();
         public List<string> WordsToFind = new List<string>();
-        public List<Text> LettersBoxes = new List<Text>();
-
-        public GameObject LetterBoxPrefab;
-        public Button StartButton;
-        public GameObject WordZone;
-        public string SelectedWord;
-        public string CurrentProgress;
+        public List<Text> WrongLet = new List<Text>();
+        
         public GameObject LettersButtonPanel;
         public GameObject LetterButtonPrefab;
+        public GameObject LetterBoxPrefab;
+        public GameObject WrongLBHandler;
+        public GameObject WrongLBPrefab;
+        public GameObject WordZone;
         
+        public Button StartButton;
+        
+        public string SelectedWord;
+
+        private int maxTries = 10;
         
         // Start is called before the first frame update
         void Awake()
@@ -52,9 +56,12 @@ namespace Management
             char firstLet = SelectedWord[0];
             foreach (var let in SelectedWord)
             {
-                Text text = Instantiate(LetterBoxPrefab, WordZone.transform).GetComponent<Text>();
-                LettersBoxes.Add(text);
-                if (let == firstLet) text.text = let.ToString();
+                LettersBoxesComponent LB = 
+                    Instantiate(LetterBoxPrefab, WordZone.transform).GetComponent<LettersBoxesComponent>();
+                LB.LinkedLetter = let;
+                LettersBoxes.Add(LB);
+                if (let == firstLet) LB.DrawLet();
+                if (let == ' ') LB.DrawLet();
                 Debug.Log(let);
             }
             Letters[SelectedWord[0]].gameObject.SetActive(false);
@@ -77,21 +84,49 @@ namespace Management
         {
             SetupButtons();
             SelectWordToFind();
-            CurrentProgress += SelectedWord[0].ToString();
         }
 
         void CheckLetter(char lKey)
         {
-            foreach (var let in SelectedWord)
+            foreach (var letBox in LettersBoxes)
             {
-                foreach (var letBox in LettersBoxes)
+                if (lKey == letBox.LinkedLetter)
                 {
-                    if (lKey == let)
-                    {
-                        let.text = lKey.ToString();
-                        if(Letters[lKey].gameObject.activeSelf)Letters[lKey].gameObject.SetActive(false);
-                    }
+                    letBox.DrawLet();
+                    if(Letters[lKey].gameObject.activeSelf)Letters[lKey].gameObject.SetActive(false);
                 }
+                else DrawWL(lKey);
+            }
+            CheckVictory();
+        }
+
+        void CheckVictory()
+        {
+            string currentAdv = "";
+            foreach (var LB in LettersBoxes)
+            {
+                currentAdv += LB.GetComponentInChildren<Text>().text;
+            }
+            if (currentAdv == SelectedWord)Debug.Log("Victiore");
+        }
+
+        void DrawWL(char c)
+        {
+            if (WrongLet.Find(c))
+            
+            {
+                Text text = Instantiate(WrongLBPrefab, WrongLBHandler.transform).GetComponent<Text>();
+                text.text = c.ToString();
+                text.name = text.text;
+                WrongLet.Add(text);
+            }
+        }
+
+        void CheckLoose()
+        {
+            if (WrongLet.Count >= maxTries)
+            {
+                Debug.Log("yousk");
             }
         }
     }
