@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52b131db-8dea-4712-b567-444560aaf684" name="Default Changelist" comment="" />
+    <list default="true" id="52b131db-8dea-4712-b567-444560aaf684" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hangman-Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hangman-Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hangman-Game/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hangman-Game/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hangman-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hangman-Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LetterBox.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LetterBox.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LetterButton.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LetterButton.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WrongLetBox.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WrongLetBox.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,17 +29,38 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectReference/GameObjectVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectReference/GameObjectReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectListReference/GameObjectListVariable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Letters/LettersBoxesComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/Variable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextVariable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/ListOfWords.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/Reference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Gestion/GameManager.prefab" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Letters/LettersBoxesComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SO/ListOfWords.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonReference/ButtonVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonReference/ButtonReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonListReference/ButtonListVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" />
       </list>
     </option>
@@ -31,7 +71,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,6 +114,8 @@
       <workItem from="1568620895294" duration="5514000" />
       <workItem from="1568645757851" duration="317000" />
       <workItem from="1568646090850" duration="3106000" />
+      <workItem from="1573473711940" duration="62000" />
+      <workItem from="1573473983850" duration="11424000" />
     </task>
     <servers />
   </component>

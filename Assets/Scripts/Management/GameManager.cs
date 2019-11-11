@@ -1,5 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using GenericEventAndReferences.SOEvents.VoidEvents;
+using GenericEventAndReferences.SOReferences.GameObjectReference;
+using GenericEventAndReferences.SOReferences.IntReference;
+using GenericEventAndReferences.SOReferences.StringReference;
+using GenericEventAndReferences.SOReferences.TextReference;
 using Letters;
 using SO;
 using UnityEngine;
@@ -13,80 +18,61 @@ namespace Management
     public class GameManager : MonoBehaviour
     {
         public List<LettersBoxesComponent> LettersBoxes = new List<LettersBoxesComponent>();
-        public Dictionary<char,Button> Letters = new Dictionary<char, Button>();
+        public List<Button> Letters = new List<Button>();
         
         public ListOfWords ListOfWords;
         
-        public GameObject LettersButtonPanel;
-        public GameObject LetterButtonPrefab;
-        public GameObject LetterBoxPrefab;
-        public GameObject WrongLBHandler;
-        public GameObject WrongLBPrefab;
-        public GameObject WordZone;
-        public GameObject EndPanel;
+        public GameObjectVariable LettersButtonPanel;
         
-        public Button StartButton;
-        public Button ReplayButton;
-        public Button QuitButton;
+        public GameObjectVariable LetterBoxPrefab;
+        public GameObjectVariable WrongLBHandler;
         
-        public Text WLHandler;
-        public Text Win;
-        public Text Loose;
-        public Text Info;
+        public GameObjectVariable WordZone;
+        public GameObjectVariable EndPanel;
+        
+        public TextVariable WLHandler;
+        public TextVariable Win;
+        public TextVariable Loose;
+        public TextVariable Info;
 
-        public String WrongLet = "";
-        public string SelectedWord;
+        public StringVariable WrongLet;
+        public StringVariable SelectedWord;
        
-        private int maxTries = 10;
-        
-        // Start is called before the first frame update
-        void Awake()
+        public IntVariable maxTries;
+
+        private void Awake()
         {
-            StartButton.onClick.AddListener(SetupGame);
-            ReplayButton.onClick.AddListener(ReloadGame);
-            QuitButton.onClick.AddListener(QuitApp);
+            
         }
+
 
         private void QuitApp()
         {
             Application.Quit();
         }
 
-        // Update is called once per frame
-
-
-        private void OnGUI()
-        {
-            EventSystem e = EventSystem.current;
-            if (e.currentSelectedGameObject.name.Length <2)
-            {
-                char key = Char.Parse(e.currentSelectedGameObject.name);
-                Debug.Log(key);
-                CheckLetter(key);
-            }
-        }
-    
-
-        void SelectWordToFind()
+        
+      
+        void SelectWordToFind(GameObject parent)
         {
             LettersBoxes.Clear();
-            foreach (var txt in WordZone.GetComponentsInChildren<Text>())
+            foreach (var txt in WordZone.Value.GetComponentsInChildren<Text>())
             {
                 Destroy(txt.gameObject);
             }
-            SelectedWord = ListOfWords.WordsToFind[Random.Range(0,ListOfWords.WordsToFind.Count-1)];
-            char firstLet = SelectedWord[0];
-            foreach (var let in SelectedWord)
+            SelectedWord.Value = ListOfWords.WordsToFind[Random.Range(0,ListOfWords.WordsToFind.Count-1)];
+            string firstLet = SelectedWord.Value[0].ToString();
+            foreach (var let in SelectedWord.Value)
             {
                 LettersBoxesComponent LB = 
-                    Instantiate(LetterBoxPrefab, WordZone.transform).GetComponent<LettersBoxesComponent>();
+                    Instantiate(LetterBoxPrefab.Value, parent.transform).GetComponent<LettersBoxesComponent>();
                 LB.LinkedLetter = let;
                 LettersBoxes.Add(LB);
-                if (let == firstLet) LB.DrawLet();
+                if (let.ToString() == firstLet) LB.DrawLet();
                 if (let == ' ') LB.DrawLet();
                 Debug.Log(let);
             }
-            UnactiveLetButton(firstLet);
+            UnactiveLetButton(GameObject.Find(firstLet).GetComponent<Button>());
         }
 
         
@@ -94,30 +80,24 @@ namespace Management
         void SetupButtons()
         {
             Letters.Clear();
-            foreach (var btn in LettersButtonPanel.GetComponentsInChildren<Button>())
+            foreach (var btn in LettersButtonPanel.Value.GetComponentsInChildren<Button>())
             {
-                Destroy(btn.gameObject);
-            }
-            for (char c = 'A'; c <= 'Z'; c++)
-            {
-                GameObject go = Instantiate(LetterButtonPrefab, LettersButtonPanel.transform);
-                go.name = c.ToString();
-                go.SetActive(true);
-                Letters.Add(c,go.GetComponent<Button>());
+                Letters.Add(btn);
             }
         }
 
-        void SetupGame()
+        public void SetupGame(GameObject parent)
         {
             SetupButtons();
-            SelectWordToFind();
+            SelectWordToFind(parent);
+            WLHandler.Value.text = "";
         }
 
-        void CheckLetter(char lKey)
+        public void CheckLetter(Button lKey)
         {
             foreach (var letBox in LettersBoxes)
             {
-                if (lKey == letBox.LinkedLetter)
+                if (lKey.GetComponentInChildren<Text>().text == letBox.LinkedLetter.ToString())
                 {
                     letBox.DrawLet();
                     UnactiveLetButton(lKey);
@@ -134,54 +114,49 @@ namespace Management
             {
                 currentAdv += LB.GetComponentInChildren<Text>().text;
             }
-            if (currentAdv == SelectedWord)EndTheGame(0);
+            if (currentAdv == SelectedWord.Value)EndTheGame(0);
         }
 
-        void DrawWL(char c)
+        void DrawWL(Button b)
         {
-            if (!WrongLet.Contains(c.ToString()) && !SelectedWord.Contains(c.ToString()))
+            if (!WrongLet.Value.Contains(b.GetComponent<LettersButtonsComponent>().LinkedLetter.Value) && 
+                !SelectedWord.Value.Contains(b.GetComponent<LettersButtonsComponent>().LinkedLetter.Value))
             {
-                WrongLet += c.ToString();
-                WLHandler.text = WrongLet;
+                WrongLet.Value += b.GetComponent<LettersButtonsComponent>().LinkedLetter.Value;
+                WLHandler.Value.text = WrongLet.Value;
                 CheckLoose();
-                UnactiveLetButton(c);
+                UnactiveLetButton(b);
             }
         }
 
         void CheckLoose()
         {
-            if (WrongLet.Length >= maxTries)
+            if (WrongLet.Value.Length >= maxTries.Value)
             {
                 EndTheGame(1);
             }
         }
 
-        void UnactiveLetButton(char c)
+        void UnactiveLetButton(Button LetterBut)
         {
-            if(Letters[c].gameObject.activeSelf)Letters[c].gameObject.SetActive(false);
+            if(LetterBut.interactable)LetterBut.interactable = false;
         }
 
         void EndTheGame(int i)
         {
-            EndPanel.SetActive(true);
+            EndPanel.Value.SetActive(true);
             switch (i)
             {
                 case 0 : 
-                    Loose.gameObject.SetActive(false);
-                    Win.gameObject.SetActive(true);
+                    Loose.Value.gameObject.SetActive(false);
+                    Win.Value.gameObject.SetActive(true);
                     break;
                 case 1 :  
-                    Win.gameObject.SetActive(false);
-                    Loose.gameObject.SetActive(true);
+                    Win.Value.gameObject.SetActive(false);
+                    Loose.Value.gameObject.SetActive(true);
                     break;
             }
-            Info.text = "The word was : " + SelectedWord;
-        }
-
-        void ReloadGame()
-        {
-            EndPanel.SetActive(false);
-            SetupGame();
+            Info.Value.text = "The word was : " + SelectedWord;
         }
     }
 }

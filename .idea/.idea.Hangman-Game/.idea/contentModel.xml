@@ -1,12 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\victor.bancells\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\victor.bancells\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Hangman-Game.1819086278.00" t="ExcludeRecursive" />
-    <e p="C:\Users\victor.bancells\Documents\Hangman-Game" t="IncludeRecursive">
+    <e p="C:\Users\Victor\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Victor\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Hangman-Game.-1265851341.00" t="ExcludeRecursive" />
+    <e p="E:\Pro\Dev\Fork\Hangman-Game" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="GenericEventAndReferences" t="Include">
+            <e p="SOEvents" t="Include">
+              <e p="BaseGameEvent.cs" t="Include" />
+              <e p="BaseGameEventListener.cs" t="Include" />
+              <e p="BoolEvents" t="Include">
+                <e p="BoolEvent.cs" t="Include" />
+                <e p="BoolEventListener.cs" t="Include" />
+                <e p="UnityBoolEvent.cs" t="Include" />
+              </e>
+              <e p="GameObjectEvents" t="Include">
+                <e p="GameObjectEvent.cs" t="Include" />
+                <e p="GameObjectEventListener.cs" t="Include" />
+                <e p="UnityGameObjectEvent.cs" t="Include" />
+              </e>
+              <e p="IGameEventListener.cs" t="Include" />
+              <e p="IntEvents" t="Include">
+                <e p="IntEvent.cs" t="Include" />
+                <e p="IntEventListener.cs" t="Include" />
+                <e p="UnityIntEvent.cs" t="Include" />
+              </e>
+              <e p="StringEvents" t="Include">
+                <e p="StringEvent.cs" t="Include" />
+                <e p="StringEventListener.cs" t="Include" />
+                <e p="UnityStringEvent.cs" t="Include" />
+              </e>
+              <e p="StringObjectEvents" t="Include">
+                <e p="StringObjectEvent.cs" t="Include" />
+                <e p="StringObjectEventListener.cs" t="Include" />
+                <e p="UnityStringObjectEvent.cs" t="Include" />
+              </e>
+              <e p="VoidEvents" t="Include">
+                <e p="UnityVoidEvent.cs" t="Include" />
+                <e p="Void.cs" t="Include" />
+                <e p="VoidEvent.cs" t="Include" />
+                <e p="VoidEventListener.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SOReferences" t="Include">
+              <e p="CameraReference" t="Include">
+                <e p="CameraReference.cs" t="Include" />
+                <e p="CameraVariable.cs" t="Include" />
+              </e>
+              <e p="DictionaryStringObjectReference" t="Include">
+                <e p="DictionaryStringObjectReference.cs" t="Include" />
+                <e p="DictionaryStringObjectVariable.cs" t="Include" />
+              </e>
+              <e p="FloatReference" t="Include">
+                <e p="FloatReference.cs" t="Include" />
+                <e p="FloatVariable.cs" t="Include" />
+              </e>
+              <e p="GameObjectListReference" t="Include">
+                <e p="GameObjectListReference.cs" t="Include" />
+                <e p="GameObjectListVariable.cs" t="Include" />
+              </e>
+              <e p="GameObjectReference" t="Include">
+                <e p="GameObjectReference.cs" t="Include" />
+                <e p="GameObjectVariable.cs" t="Include" />
+              </e>
+              <e p="IntReference" t="Include">
+                <e p="IntReference.cs" t="Include" />
+                <e p="IntVariable.cs" t="Include" />
+              </e>
+              <e p="RectReference" t="Include">
+                <e p="RectReference.cs" t="Include" />
+                <e p="RectVariable.cs" t="Include" />
+              </e>
+              <e p="RectTransformReference" t="Include">
+                <e p="RectTransformReference.cs" t="Include" />
+                <e p="RectTransformVariable.cs" t="Include" />
+              </e>
+              <e p="Reference.cs" t="Include" />
+              <e p="RendererReference" t="Include">
+                <e p="RendererReference.cs" t="Include" />
+                <e p="RendererVariable.cs" t="Include" />
+              </e>
+              <e p="StringReference" t="Include">
+                <e p="StringReference.cs" t="Include" />
+                <e p="StringVariable.cs" t="Include" />
+              </e>
+              <e p="TextReference" t="Include">
+                <e p="TextReference.cs" t="Include" />
+                <e p="TextVariable.cs" t="Include" />
+              </e>
+              <e p="Texture2DReference" t="Include">
+                <e p="Texture2DReference.cs" t="Include" />
+                <e p="Texture2DVariable.cs" t="Include" />
+              </e>
+              <e p="TransformReference" t="Include">
+                <e p="TransformReference.cs" t="Include" />
+                <e p="TransformVariable.cs" t="Include" />
+              </e>
+              <e p="Variable.cs" t="Include" />
+              <e p="Vector3Reference" t="Include">
+                <e p="Vector3Reference.cs" t="Include" />
+                <e p="Vector3Variable.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Letters" t="Include">
             <e p="LettersBoxesComponent.cs" t="Include" />
             <e p="LettersButtonsComponent.cs" t="Include" />

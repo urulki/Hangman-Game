@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1379056091012862458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1379056091012862459}
+  - component: {fileID: 1379056091012862460}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1379056091012862459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379056091012862458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1379056091012862460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379056091012862458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0499986685505a543816058662c1fcc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LettersBoxes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Letters:
+  - {fileID: 4862923964218205003, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 8217525470926382919, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 458111445602888581, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 5944426591508380430, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 3655085915785963558, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 1958799627941064813, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 2102085602604955189, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 1484322600935475025, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 319921386975805474, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 2911982758305781459, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 3868598878806871124, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 293835955223192383, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 2011718300222845630, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 6085234889411632635, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 7313621365506289967, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 4352125322704300000, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 6004030798367124431, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 6175103101673815350, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 5394839583712282107, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 8381737727895778125, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 3856291666967024030, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 485621475519671838, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 5063959993656405719, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 7384584798020368293, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 2849515345325844672, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  - {fileID: 6930238865027791938, guid: 60263a0698887a34f897a7889941fa50, type: 3}
+  ListOfWords: {fileID: 11400000, guid: cd0c8d558b1d574468cf0bcd2a2e701b, type: 2}
+  LettersButtonPanel: {fileID: 11400000, guid: 3cfc27b6fdb67b247bcb44a27e1fcd2d, type: 2}
+  LetterBoxPrefab: {fileID: 11400000, guid: 6020009e77ec78245ac3134cca79d6de, type: 2}
+  WrongLBHandler: {fileID: 11400000, guid: 2df93ca0bc303ab45b879dac1eace025, type: 2}
+  WordZone: {fileID: 11400000, guid: df7422bc5b10bd24c84c9ff39f9d05f3, type: 2}
+  EndPanel: {fileID: 11400000, guid: 9fa1e339b64ff544bbba75ce3e61f492, type: 2}
+  WLHandler: {fileID: 11400000, guid: 3abb274c2b0048e44bc3a16bfe720956, type: 2}
+  Win: {fileID: 11400000, guid: fe70eed41070ad34ea29b94929880c08, type: 2}
+  Loose: {fileID: 11400000, guid: 1c6a01d31e40eb84aa716ad9bcc2a402, type: 2}
+  Info: {fileID: 11400000, guid: e4e50336b3daf934cb377789e5c2d0df, type: 2}
+  WrongLet: {fileID: 11400000, guid: 7de695233937016408b5af867d97acb3, type: 2}
+  SelectedWord: {fileID: 11400000, guid: 12b2a6de21287414e930800f8edd8149, type: 2}
+  OnSetupEvent: {fileID: 11400000, guid: 7acbc9e5db9f686459666907bb540812, type: 2}
+  maxTries: {fileID: 11400000, guid: f41a1f2113f79e1418c4990981c5cc73, type: 2}

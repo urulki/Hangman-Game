@@ -1,4 +1,5 @@
 ﻿using System;
+using GenericEventAndReferences.SOReferences.StringReference;
 using Management;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ namespace Letters
     public class LettersButtonsComponent : MonoBehaviour
     {
         private Button currentBtn;
+        public StringVariable LinkedLetter;
         
         // Start is called before the first frame update
         void Awake()
@@ -17,7 +19,8 @@ namespace Letters
 
         private void OnEnable()
         {
-            currentBtn.GetComponentInChildren<Text>().text = currentBtn.name;
+            currentBtn.name = LinkedLetter.Value;
+            currentBtn.GetComponentInChildren<Text>().text = LinkedLetter.Value;
         }
     }
 }
