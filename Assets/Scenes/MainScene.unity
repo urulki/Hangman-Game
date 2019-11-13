@@ -1399,5 +1399,27 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8172684425239288224, guid: 28cd870aa8449cb449bc1394fbfe8a23,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2199261852466315447}
+    - target: {fileID: 8172684425239288224, guid: 28cd870aa8449cb449bc1394fbfe8a23,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnactiveLetButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28cd870aa8449cb449bc1394fbfe8a23, type: 3}
+--- !u!114 &2199261852466315447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8172684425239288227, guid: 28cd870aa8449cb449bc1394fbfe8a23,
+    type: 3}
+  m_PrefabInstance: {fileID: 2199261852466315446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e06c81c96aedc4cac2bf6f82fab232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

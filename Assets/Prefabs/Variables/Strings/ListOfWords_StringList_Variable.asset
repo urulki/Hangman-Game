@@ -9,7 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0c0a0b7cba45c0a4b4887aa15056a2, type: 3}
-  m_Name: Void_OnSetupEvent
+  m_Script: {fileID: 11500000, guid: 22e2749891428e04894f202b9e714400, type: 3}
+  m_Name: ListOfWords_StringList_Variable
   m_EditorClassIdentifier: 
-  Description: SettingUpTheGame.
+  Value:
+  - XYLOPHONE
+  - WAGON
+  - MADNESS
+  - ILLNESS
+  - INTERRUPTION
+  - MURDER
+  - SALVATION
+  - CHARITY
+  - BEAT
+  - MONSTER

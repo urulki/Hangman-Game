@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bde29f48cfb8c24787ab13b24e3efce, type: 3}
-  m_Name: List Of Words 0
+  m_Script: {fileID: 11500000, guid: d9766c7f49856224997bd219c289f870, type: 3}
+  m_Name: LetterBoxesList_Variable
   m_EditorClassIdentifier: 
-  WordsToFind:
-  - AVANT GARDE
-  - WAGON
-  - XYLOPHONE
-  - RYTHME
-  - LICORNE
+  Value: []

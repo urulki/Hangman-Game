@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using GenericEventAndReferences.SOEvents.VoidEvents;
+using GenericEventAndReferences.SOReferences;
+using GenericEventAndReferences.SOReferences.BoolReference;
 using GenericEventAndReferences.SOReferences.GameObjectReference;
 using GenericEventAndReferences.SOReferences.IntReference;
+using GenericEventAndReferences.SOReferences.StringListReference;
 using GenericEventAndReferences.SOReferences.StringReference;
+using GenericEventAndReferences.SOReferences.TextListReference;
 using GenericEventAndReferences.SOReferences.TextReference;
 using Letters;
-using SO;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -17,10 +17,10 @@ namespace Management
 {
     public class GameManager : MonoBehaviour
     {
-        public List<LettersBoxesComponent> LettersBoxes = new List<LettersBoxesComponent>();
+        public LetterBoxesListVariable LettersBoxes;
         public List<Button> Letters = new List<Button>();
         
-        public ListOfWords ListOfWords;
+        public StringListVariable ListOfWords;
         
         public GameObjectVariable LettersButtonPanel;
         
@@ -37,46 +37,52 @@ namespace Management
 
         public StringVariable WrongLet;
         public StringVariable SelectedWord;
-       
+        public StringVariable FirstLetter;
+        public StringVariable Empty;
+        
+        
         public IntVariable maxTries;
+
+        public BoolVariable SetupComplete;
+        
+        
 
         private void Awake()
         {
-            
+            FirstLetter.Value = "";
+            WrongLet.Value = "";
+            WLHandler.Value.text = "";
         }
-
 
         private void QuitApp()
         {
             Application.Quit();
         }
-
-        
       
         void SelectWordToFind(GameObject parent)
         {
-            LettersBoxes.Clear();
+            LettersBoxes.Value.Clear();
             foreach (var txt in WordZone.Value.GetComponentsInChildren<Text>())
             {
                 Destroy(txt.gameObject);
             }
-            SelectedWord.Value = ListOfWords.WordsToFind[Random.Range(0,ListOfWords.WordsToFind.Count-1)];
-            string firstLet = SelectedWord.Value[0].ToString();
+            SelectedWord.Value = ListOfWords.Value[Random.Range(0,ListOfWords.Value.Count-1)];
+            FirstLetter.Value = SelectedWord.Value[0].ToString();
             foreach (var let in SelectedWord.Value)
             {
-                LettersBoxesComponent LB = 
-                    Instantiate(LetterBoxPrefab.Value, parent.transform).GetComponent<LettersBoxesComponent>();
-                LB.LinkedLetter = let;
-                LettersBoxes.Add(LB);
-                if (let.ToString() == firstLet) LB.DrawLet();
-                if (let == ' ') LB.DrawLet();
+                LettersBoxesComponent LB =
+                    Instantiate(LetterBoxPrefab.Value, GameObject.Find(parent.name).transform).GetComponent<LettersBoxesComponent>();
+                if (let.ToString() != Empty.Value)
+                    LB.LinkedLetter = GameObject.Find(let.ToString()).GetComponent<LettersButtonsComponent>()
+                        .LinkedLetter;
+                else LB.LinkedLetter = Empty;
+                LettersBoxes.Value.Add(LB);
+                if (let.ToString() == FirstLetter.Value) LB.DrawLet(FirstLetter);
+                if (let == ' ') LB.DrawLet(Empty) ;
                 Debug.Log(let);
             }
-            UnactiveLetButton(GameObject.Find(firstLet).GetComponent<Button>());
+            SetupComplete.Value = true;
         }
-
-        
-
         void SetupButtons()
         {
             Letters.Clear();
@@ -85,51 +91,28 @@ namespace Management
                 Letters.Add(btn);
             }
         }
-
-        public void SetupGame(GameObject parent)
+        public void SetupGame(GameObjectVariable parent)
         {
+            FirstLetter.Value = "";
+            WrongLet.Value = "";
+            WLHandler.Value.text = "";
             SetupButtons();
-            SelectWordToFind(parent);
+            SelectWordToFind(parent.Value);
             WLHandler.Value.text = "";
         }
-
-        public void CheckLetter(Button lKey)
-        {
-            foreach (var letBox in LettersBoxes)
-            {
-                if (lKey.GetComponentInChildren<Text>().text == letBox.LinkedLetter.ToString())
-                {
-                    letBox.DrawLet();
-                    UnactiveLetButton(lKey);
-                }
-                else DrawWL(lKey);
-            }
-            CheckVictory();
-        }
-
-        void CheckVictory()
+        public void CheckVictory()
         {
             string currentAdv = "";
-            foreach (var LB in LettersBoxes)
+            foreach (var LB in LettersBoxes.Value)
             {
                 currentAdv += LB.GetComponentInChildren<Text>().text;
+                Debug.Log(currentAdv);
             }
             if (currentAdv == SelectedWord.Value)EndTheGame(0);
         }
+        
 
-        void DrawWL(Button b)
-        {
-            if (!WrongLet.Value.Contains(b.GetComponent<LettersButtonsComponent>().LinkedLetter.Value) && 
-                !SelectedWord.Value.Contains(b.GetComponent<LettersButtonsComponent>().LinkedLetter.Value))
-            {
-                WrongLet.Value += b.GetComponent<LettersButtonsComponent>().LinkedLetter.Value;
-                WLHandler.Value.text = WrongLet.Value;
-                CheckLoose();
-                UnactiveLetButton(b);
-            }
-        }
-
-        void CheckLoose()
+        public void CheckLoose()
         {
             if (WrongLet.Value.Length >= maxTries.Value)
             {
@@ -137,10 +120,7 @@ namespace Management
             }
         }
 
-        void UnactiveLetButton(Button LetterBut)
-        {
-            if(LetterBut.interactable)LetterBut.interactable = false;
-        }
+        
 
         void EndTheGame(int i)
         {

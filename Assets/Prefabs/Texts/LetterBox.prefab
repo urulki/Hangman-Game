@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4979158787075808852}
   - component: {fileID: 4121066163173041320}
   - component: {fileID: -3166949108227734936}
+  - component: {fileID: 8584661008167039757}
   m_Layer: 5
   m_Name: LetterBox
   m_TagString: Untagged
@@ -64,8 +65,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -92,4 +91,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e9e55ba9b7ef34b817b135dca8b2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LinkedLetter: 0
+  LinkedLetter: {fileID: 0}
+--- !u!114 &8584661008167039757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802768065890035814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536bf8df6fc3419aa64037f56f4c18a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: e7b9477fa3e46f74c9df22d4b3cfae6f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -3166949108227734936}
+        m_MethodName: DrawLet
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: GenericEventAndReferences.SOReferences.StringReference.StringVariable,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

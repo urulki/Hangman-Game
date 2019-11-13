@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1534687345781016800}
   - component: {fileID: 1534687345781016802}
   - component: {fileID: 1534687345781016801}
+  - component: {fileID: -5553782612179653250}
+  - component: {fileID: 7700401226929732305}
   m_Layer: 5
   m_Name: WrongLetText
   m_TagString: Untagged
@@ -76,4 +78,44 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: XWYOPQRTUVMKB
+--- !u!114 &-5553782612179653250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534687345781016807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536bf8df6fc3419aa64037f56f4c18a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: 274910681463cc14897ee712b2fd1053, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7700401226929732305}
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7700401226929732305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534687345781016807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b105e4010b2196f4abb0affa3137461b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WrongLetters: {fileID: 11400000, guid: 7de695233937016408b5af867d97acb3, type: 2}

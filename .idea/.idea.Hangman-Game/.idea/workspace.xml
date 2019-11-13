@@ -32,21 +32,29 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectReference/GameObjectVariable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectReference/GameObjectReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectListReference/GameObjectListVariable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Letters/LettersBoxesComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/Variable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextVariable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SO/ListOfWords.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/Reference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectReference/GameObjectVariable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Gestion/GameManager.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/StringListReference/StringListVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/BoolReference/BoolVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/Reference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectReference/GameObjectReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LettersBoxesComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/StringListReference/StringListReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonListReference/ButtonListVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/GameObjectListReference/GameObjectListReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Variables/Strings/ListOfWords_StringList_Variable.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/Variable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Letters/WrongLetterComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextListReference/TextListVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/LetterBoxesListVariable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -55,11 +63,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SO/ListOfWords.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonReference/ButtonVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonReference/ButtonReference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonListReference/ButtonListVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextReference/TextReference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntVariable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/IntReference/IntReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/StringListReference/StringListVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/StringListReference/StringListReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/ButtonListReference/ButtonListVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/TextListReference/TextListVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/LetterBoxesListVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GenericEventAndReferences/SOReferences/BoolReference/BoolVariable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LettersBoxesComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Letters/WrongLetterComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Letters/LettersButtonsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Management/GameManager.cs" />
       </list>
@@ -71,7 +86,7 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -116,6 +131,7 @@
       <workItem from="1568646090850" duration="3106000" />
       <workItem from="1573473711940" duration="62000" />
       <workItem from="1573473983850" duration="11424000" />
+      <workItem from="1573637881553" duration="10017000" />
     </task>
     <servers />
   </component>

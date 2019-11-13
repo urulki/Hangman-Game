@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1379056091012862459}
   - component: {fileID: 1379056091012862460}
+  - component: {fileID: 3364062863371145387}
+  - component: {fileID: -574060591526988134}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,16 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0499986685505a543816058662c1fcc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LettersBoxes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  LettersBoxes: {fileID: 11400000, guid: 240bd8a8e4cc00c439aaf70517aff988, type: 2}
   Letters:
   - {fileID: 4862923964218205003, guid: 60263a0698887a34f897a7889941fa50, type: 3}
   - {fileID: 8217525470926382919, guid: 60263a0698887a34f897a7889941fa50, type: 3}
@@ -80,7 +73,7 @@ MonoBehaviour:
   - {fileID: 7384584798020368293, guid: 60263a0698887a34f897a7889941fa50, type: 3}
   - {fileID: 2849515345325844672, guid: 60263a0698887a34f897a7889941fa50, type: 3}
   - {fileID: 6930238865027791938, guid: 60263a0698887a34f897a7889941fa50, type: 3}
-  ListOfWords: {fileID: 11400000, guid: cd0c8d558b1d574468cf0bcd2a2e701b, type: 2}
+  ListOfWords: {fileID: 11400000, guid: 2bb38b6cc9b80bf40b394eb0c274e522, type: 2}
   LettersButtonPanel: {fileID: 11400000, guid: 3cfc27b6fdb67b247bcb44a27e1fcd2d, type: 2}
   LetterBoxPrefab: {fileID: 11400000, guid: 6020009e77ec78245ac3134cca79d6de, type: 2}
   WrongLBHandler: {fileID: 11400000, guid: 2df93ca0bc303ab45b879dac1eace025, type: 2}
@@ -92,5 +85,74 @@ MonoBehaviour:
   Info: {fileID: 11400000, guid: e4e50336b3daf934cb377789e5c2d0df, type: 2}
   WrongLet: {fileID: 11400000, guid: 7de695233937016408b5af867d97acb3, type: 2}
   SelectedWord: {fileID: 11400000, guid: 12b2a6de21287414e930800f8edd8149, type: 2}
-  OnSetupEvent: {fileID: 11400000, guid: 7acbc9e5db9f686459666907bb540812, type: 2}
+  FirstLetter: {fileID: 11400000, guid: 462a049ffbec26440992d6bbdf239b82, type: 2}
+  Empty: {fileID: 11400000, guid: 8269f323b4ae62d4295180a51c5626e3, type: 2}
   maxTries: {fileID: 11400000, guid: f41a1f2113f79e1418c4990981c5cc73, type: 2}
+  SetupComplete: {fileID: 11400000, guid: 06fb236611df30f4a836fcf2464610e5, type: 2}
+--- !u!114 &3364062863371145387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379056091012862458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536bf8df6fc3419aa64037f56f4c18a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: 7acbc9e5db9f686459666907bb540812, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379056091012862460}
+        m_MethodName: SetupGame
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: df7422bc5b10bd24c84c9ff39f9d05f3,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: GenericEventAndReferences.SOReferences.GameObjectReference.GameObjectVariable,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-574060591526988134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379056091012862458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536bf8df6fc3419aa64037f56f4c18a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: 9737a08fac7153c48b87566fad648373, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379056091012862460}
+        m_MethodName: CheckLoose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379056091012862460}
+        m_MethodName: CheckVictory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5bd9c66ac8e793429f922207d080b24, type: 3}
-  m_Name: LetterBox_GameObject_Variable
+  m_Name: LetterBoxPanel_GameObject_Variable
   m_EditorClassIdentifier: 
   Value: {fileID: 1135834717555170078, guid: 60263a0698887a34f897a7889941fa50, type: 3}
